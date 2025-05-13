@@ -1,0 +1,83 @@
+/* Basic reset for padding and margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the navigation bar */
+nav {
+  background-color: #fac6ec;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between; /* Space out the nav links */
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* Wrapper for the left-aligned links */
+nav .left-links {
+  display: flex;
+  gap: 55px;
+}
+
+/* Wrapper for the right-aligned links */
+nav .right-links {
+  display: flex;
+  gap: 55px;
+}
+
+/* Outer layout wrapper */
+.navbar-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of screen */
+  overflow-y: auto; /* Allow scroll when needed */
+}
+
+/* Page content under navbar */
+.page-content {
+  flex-grow: 1;
+  background-color: #FBF8F4;
+}
+
+/* Style for the navigation links */
+nav a {
+  color: rgb(30, 39, 130);
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the links */
+nav a:hover {
+  background-color: #f3b8e4;
+  color: #4a61b3;
+}
+
+/* Active link style */
+nav a.active {
+  background-color: #fac6ec;
+  color: #7474db;
+}
+
+/* Ensure the parent container (NavLink) is positioned relatively */
+.right-links .cart-item-count {
+  position: relative;  /* This makes sure the cart count positions itself relative to the NavLink */
+}
+
+/* Style for the cart item count (red dot) */
+.cart-item-count {
+  position: absolute;  /* Position the red dot absolutely within the NavLink */
+  top: -16px;  /* Adjust position based on your preference */
+  right: 3px;  /* Adjust position based on your preference */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
