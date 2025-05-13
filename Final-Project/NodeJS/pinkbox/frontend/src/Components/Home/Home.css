@@ -1,0 +1,132 @@
+.home{
+    min-height: 90vh;
+    background:  linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 9%;
+}
+.home-left{
+    line-height: 1.1;
+}
+.home-left h2{
+    color: #090909;
+    font-size: 18px;
+}
+
+.home-left p{
+    color: #171717;
+    font-size: 80px;   
+    font-weight: 700;
+}
+.home-hand-icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.home-hand-icon img{
+    width: 70px;
+}
+.home-latest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 220px;
+    height: 50px;
+    border-radius: 75px;
+    margin-top: 20px;
+    background: #ff4141;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.home-latest-btn img{
+    width: 16px;
+}
+
+.home-right img{
+    width: 450px;
+}
+
+/* Add these styles to Home.css */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); /* Match the background */
+    padding: 10px; /* Add padding for better alignment */
+    border-radius: 5px; /* Add border radius for smooth corners */
+  }
+  
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    background-color: transparent; /* Transparent background to match */
+    color: #171717; /* Text color */
+}
+  
+.search-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+  
+.search-result {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+@media(max-width:1200px){
+    
+    .home{
+        padding: 10px 6%;
+    }
+    .home-left p{
+        font-size: 70px;
+    }
+    .home-right img{
+        width: 400px;
+    }
+   
+}
+@media(max-width:900px){
+   
+    .home-left p{
+        font-size: 45px;
+    }
+    .home-right img{
+        width: 350px;
+    }
+   
+}
+@media(max-width:700px){
+   .home{
+    padding: 0 10%;
+    min-height: 95vh;
+   }
+    .home-left p{
+        font-size: 55px;
+    }
+    .home-right{
+        display: none;
+    }
+    .home-left{
+        line-height: 1.2;
+    }
+    .home-left h2{
+        margin-bottom: 20px;
+    }
+  
+    .home-latest-btn{
+        margin-top: 30px;
+    }
+}

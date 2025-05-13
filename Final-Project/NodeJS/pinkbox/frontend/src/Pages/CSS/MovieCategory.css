@@ -1,0 +1,99 @@
+.moviecategory-banner{
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+}
+.moviecategory-indexSort{
+    display: flex;
+    margin: 0px 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+.moviecategory-sort{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+.moviecategory-indexSort p span{
+    font-weight: 600;
+}
+.moviecategory-movies{
+    width: 90%;
+    max-width: 1360px;
+    justify-content: center;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.moviecategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 200px;
+    height: 60px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* MovieCategory.css styles */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); /* Match the background */
+    padding: 10px; /* Add padding for better alignment */
+    border-radius: 5px; /* Add border radius for smooth corners */
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    background-color: transparent; /* Transparent background to match */
+    color: #171717; /* Text color */
+}
+
+.search-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width:1280px) {
+    .moviecategory-banner{
+        margin: 20px auto;
+        width: 90%;
+    }
+    .moviecategory-indexSort{
+        width: 90%;
+       margin: auto;
+    }
+    .moviecategory-sort{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .moviecategory-indexSort p{
+        font-size: 12px;
+    }
+}
+@media (max-width:800px) {
+    .moviecategory-banner{
+        width: 95%;
+    }
+     .moviecategory-loadmore{
+        margin: 60px auto;
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
