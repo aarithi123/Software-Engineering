@@ -1,0 +1,112 @@
+Alpine Go
+
+To display the detailed information of our system, we are going to use a tool called neofetch:
+apk add neofetch
+neofetch
+
+install go:
+apk add --update --no-cache go vim git make musl-dev curl
+
+export GOPATH=/root/go
+export PATH=${GOPATH}/bin:/usr/local/go/bin:$PATH
+export GOBIN=$GOROOT/bin
+mkdir -p ${GOPATH}/src ${GOPATH}/bin
+export GO111MODULE=on
+
+
+go version
+
+vim hello.go
+package main
+import "fmt"
+func main() {
+    fmt.Printf("Hello guys, welcome to Go Programming\n")
+}
+go run hello.go
+
+
+https://go.dev/doc/contribute
+
+git clone https://github.com/golang/go.git
+to compile -> ./all.bash
+
+ifconfig -> inet address
+
+---------------------------------------------------------------
+issue:
+https://github.com/golang/go/issues/71424
+
+Alpine VM IP: 10.0.0.39
+sftp root@10.0.0.39 password: skylark
+
+/go/bin/go version
+
+localhost:~# /root/go/bin/go version
+go version devel go1.24-608acff847 Wed Jan 22 10:13:04 2025 -0800 linux/amd64
+
+copy main.go as posted @ https://github.com/golang/go/issues/71424
+-------------------------------------------------------------------
+windows powershell
+wsl (ubuntu)
+
+How to install wsl( windows subsystem for Linux)
+wsl --install
+
+code (for vscode)
+
+How to reset forgotten password on wsl distribution?
+from the command window:
+wsl -l (to list all WSL instances)
+ubuntu2004 config --default-user root (change the default user to root)
+wsl
+passwd shyam
+ubuntu2004 config --default-user shyam (put back the default user to shyam)
+
+
+How to install latest golang?
+https://go.dev/doc/install
+wget https://go.dev/dl/go1.23.5.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go version
+
+
+su - aarithi (switch user)
+sudo su - (to change to root)
+
+cd Downloads/open-source-project
+https://go.dev/doc/contribute#before_contributing
+
+git clone https://go.googlesource.com/go
+cd go
+git checkout -b dev.bufio.issue.71424
+
+cd go/src
+export PATH=$PATH:/usr/local/go/bin (before compiling the dev go code, set the default go version to Go 1.22.6 or above)
+
+$ ./all.bash                                # compile and test
+export PATH=/mnt/c/Downloads/open-source-project/go/bin:$PATH   (dev version of go)
+
+Testing:
+export PATH=/mnt/c/Downloads/open-source-project/go/bin:$PATH
+cd /home/aarithi
+
+go build main.go
+./main <<< "Test"
+./main -bufio <<< "Test"
+
+
+stream of bytes
+Reader wrapping the bufio
+Reader is the interface
+bufio is the implementation
+
+javadoc 
+godoc bufio
+
+
+
+
+
+
+
